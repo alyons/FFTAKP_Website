@@ -1,11 +1,11 @@
 var cssClassNames = {
-	'headerRow': 'header-row',
+	'headerRow': 'header-row center',
 	'tableRow': 'table-row',
 	'oddTableRow': 'odd-table-row',
 	'selectedTableRow': 'selected-table-row',
 	'hoverTableRow': 'hover-table-row',
 	'headerCell': 'header-cell center',
-	'tableCell': 'table-cell',
+	'tableCell': 'table-cell center',
 	'rowNumberCell': ''};
 
 
@@ -20,7 +20,7 @@ function loadGoogleDriveTable(elementID, documentKey, range, sheetID) {
 			return;
 		}
 	
-		var options = { 'allowHtml': true, 'cssClassNames': cssClassNames };
+		var options = { 'allowHtml': true, 'cssClassNames': cssClassNames, 'sort': 'disable' };
 		var data = response.getDataTable();
 		addIconsToTable(data);
 		applyProgressBarToTable(data);
@@ -177,7 +177,7 @@ function loadSquire() {
 	{
 		document.getElementById("content").innerHTML = "<div id='squireContent'><h3>Squire Stats</h3><div id='squireData'></div><h3>Squire Active Abilities</h3><div id='squireBattleSkills'></div><h3>Squire Other Abilities</h3><div id='squireOtherSkills'></div></div>";
 	
-		loadGoogleDriveTable('squireData', '1UhDJ0G118_RKeToUh_JxCf0HzJg026a6CmCmQ8wMPJ0', 'A:N', '1067242928');
+		loadGoogleDriveTable('squireData', '1UhDJ0G118_RKeToUh_JxCf0HzJg026a6CmCmQ8wMPJ0', 'A:M', '1067242928');
 		loadGoogleDriveTable('squireBattleSkills', '1UhDJ0G118_RKeToUh_JxCf0HzJg026a6CmCmQ8wMPJ0', 'A1:O7', '0');
 		loadGoogleDriveTable('squireOtherSkills', '1UhDJ0G118_RKeToUh_JxCf0HzJg026a6CmCmQ8wMPJ0', 'A:D', '1380116551');
 	}

@@ -69,7 +69,7 @@ p
 }
 .center
 {
-	text-align: center;
+	text-align: center !important;
 }
 
 /* Navigation Accordion Styles */
