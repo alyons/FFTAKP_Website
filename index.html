@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<!-- Basic Page Needs
+		================================================== -->
+		<meta charset="utf-8" />
+		<title>Final Fantasy Tactics: A Knight's Path</title>
+		<meta name="description" content="This is a landing page for the Final Fantasy Tactics: A Knight's Path mod." />
+		<meta name="author" content="Alexander Lyons" />
+		
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		
+		<!-- Mobile Specific Metas
+		================================================== -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		
+		<!-- CSS
+		================================================== -->
+		<script>
+			WebFontConfig = { google: { families: [ 'Oxygen::latin', 'Montserrat:700:latin' ] }};
+			var wf = document.createElement('script');
+			wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+			  '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+			wf.type = 'text/javascript';
+			wf.async = 'true';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(wf, s);
+		</script>
+		<link rel="stylesheet" href="styles/base.css">
+		<link rel="stylesheet" href="styles/skeleton.css">
+		<link rel="stylesheet" href="styles/layout.css">
+		<link rel="stylesheet" href="styles/simple.css"/>
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+		<!-- <script type="text/javascript" src="scripts/jquery.min.js"></script> -->
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<script type="text/javascript" src="scripts/scriptbreaker-multiple-accordion-1.js"></script>
+		<script type="text/javascript" src="scripts/basic.js"></script>
+		<script language="JavaScript">
+			$(document).ready(function() {
+				$(".topnav").accordion({
+					accordion:false,
+					speed: 500,
+					closedSign: '[+]',
+					openedSign: '[-]'
+				});
+			});
+			window.onload = function() {
+				loadTempPage();
+			};
+			google.load("visualization", '1', {packages:['table']});
+		</script>
+	</head>
+	<body>
+		<div class="super-container full-width" id="section-tophat">
+			<div class="container">
+				<div class="sixteen columns">
+					<span class="taglead">FFT: A Knight's Path</span>
+					<!-- <span class="tagline">It's harder than FFT: 1.3 Hard Mode!</span> -->
+				</div>
+			</div>
+		</div>
+		<div class="super-container full-width" id="section-header">
+			<div class="container">
+				<header>
+					<div class="sixteen columns">
+						<h1>Final Fantasy Tactics: A Knight's Path</h1>
+					</div>
+				</header>
+			</div>
+		</div>
+		<div class="super-container full-width" id="section-content">
+			<div class="container">
+				<div class="three columns navigation">
+					<ul class="topnav">
+						<li>
+							<a href="#" onclick="loadTempPage()">Home</a>
+							<ul>
+								<li><a href="#" onclick="loadProgressPage()">Progress</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" onclick="loadTempPage()">Characters</a>
+							<ul>
+								<li>
+									<a href="#">Story Characters</a>
+									<ul>
+										<li><a href="#" onclick="loadTempPage()">Ramza</a></li>
+										<li><a href="#" onclick="loadTempPage()">Delita</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" onclick="loadTempPage()">Classes</a>
+									<ul>
+										<li><a href="#" onclick="loadSquire()">Squire</a></li>
+										<li><a href="#" onclick="loadTempPage()">Blue Mage</a></li>
+									</ul>
+								</li>
+								<li><a href="#" onclick="loadTempPage()">Monsters</a></li>
+								<li><a href="#" onclick="loadTempPage()">Bosses</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Items</a>
+							<ul>
+								<li>
+									<a href="#" onclick="loadWeapons()">Weapons</a>
+									<ul>
+										<li><a href="#knives" onclick="loadWeapons()">Knives</a></li>
+										<li><a href="#ninjaBlades" onclick="loadWeapons()">Ninja Blades</a></li>
+										<li><a href="#swords" onclick="loadWeapons()">Swords</a></li>
+										<li><a href="#knightSwords" onclick="loadWeapons()">Knight Swords</a></li>
+										<li><a href="#katanas" onclick="loadWeapons()">Katanas</a></li>
+										<li><a href="#axes" onclick="loadWeapons()">Axes</a></li>
+										<li><a href="#rods" onclick="loadWeapons()">Rods</a></li>
+										<li><a href="#staves" onclick="loadWeapons()">Staves</a></li>
+										<li><a href="#guns" onclick="loadWeapons()">Guns</a></li>
+										<li><a href="#crossbows" onclick="loadWeapons()">Crossbows</a></li>
+										<li><a href="#bows" onclick="loadWeapons()">Bows</a></li>
+										<li><a href="#harps" onclick="loadWeapons()">Harps</a></li>
+										<li><a href="#books" onclick="loadWeapons()">Books</a></li>
+										<li><a href="#spears" onclick="loadWeapons()">Spears</a></li>
+										<li><a href="#poles" onclick="loadWeapons()">Poles</a></li>
+										<li><a href="#bags" onclick="loadWeapons()">Bags</a></li>
+										<li><a href="#rapiers" onclick="loadWeapons()">Rapiers</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" onclick="loadAllArmor()">Armor</a>
+									<ul>
+										<li><a href="#heavyArmor" onclick="loadAllArmor()">Heavy Armor</a></li>
+										<li><a href="#clothing" onclick="loadAllArmor()">Clothing</a></li>
+										<li><a href="#robes" onclick="loadAllArmor()">Robes</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#" onclick="loadHeadGear()">Head Gear</a>
+									<ul>
+										<li><a href="#helmets" onclick="loadHeadGear()">Helmets</a></li>
+										<li><a href="#hats" onclick="loadHeadGear()">Hats</a></li>
+									</ul>
+								</li>
+								<li><a href="#" onclick="loadShields()">Shields</a></li>
+								<li><a href="#" onclick="loadAccessories()">Accessories</a></li>
+							</ul>
+						</li>
+						<li><a href="#" onclick="loadTempPage()">Contact Us</a></li>
+						<li><a href="#" onclick="loadTempPage()">Download</a></li>
+					</ul>
+				</div>
+				<div class="twelve columns offset-by-one" id="content">
+				</div>
+			</div>
+		</div>
+		<div class="super-container full-width" id="section-footer">
+			<div class="container">
+				<div class="sixteen columns">
+					<h5>About This Mod</h5>
+					This is a fan made mod for Final Fantasy Tactics &copy; 1997, 1998 Square Enix. We claim none of the items held in copyright by Square Enix as our own.
+					We are just fans trying to enjoy the game FFT in a different way.
+				</div>
+			</div>
+		</div>
+		<div class="super-container full-width" id="section-subfooter">
+			<div class="container">
+				<div class="sixteen columns">
+				<span class="taglead">Website by: Alexander Lyons</span>
+				<span class="tagline">Mod by: Joel Rechtman</span>
+				</div>
+			</div>
+		</div>
+	</body>
+<html>

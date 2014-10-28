@@ -1,0 +1,132 @@
+﻿body
+{
+	background-image: url("../images/black-groove-stripes-repeating-background.jpg") repeat;
+    /* background-color:#0A0A0A; */
+	min-height: 768px;
+	color:#EAEAEA;
+}
+p
+{
+	font-family: "Oxygen", sans-serif;
+	font-size: 16px;
+}
+#header
+{
+	padding-top: 20 px;
+}
+/* #section-content { min-height: 748px; } */
+#section-tophat { padding: 10px; }
+#section-tophat span.taglead
+{
+	float: left;
+}
+#section-tophat span.tagline
+{
+	float: right;
+}
+#section-subfooter { padding: 10px; }
+#section-subfooter span.taglead
+{
+	float: left;
+}
+#section-subfooter span.tagline
+{
+	float: right;
+}
+#google-visualization-table-tr-head
+{
+	background-color: #0A0A0A;
+}
+/* table, td, th, tr { background-color: #0A0A0A; } */
+.table-cell
+{
+	color:#EAEAEA;
+}
+.table-row
+{
+	background-color: #2A2A2A;
+}
+.odd-table-row
+{
+	background-color: #4A4A4A;
+}
+.header-row
+{
+	background-color: #4A4A4A;
+	border-bottom: 1px solid #EAEAEA;
+}
+.hover-table-row
+{
+	background-color: #6A6A6A;
+}
+.selected-table-row
+{
+	background-color: #8A8A8A;
+}
+.header-cell
+{
+	border: none;
+}
+.center
+{
+	text-align: center;
+}
+
+/* Navigation Accordion Styles */
+ul.topnav {
+	padding: 0;
+	margin: 0;
+	font-size: 1em;
+	line-height: 0.5em;
+	list-style: none;
+}
+
+ul.topnav li {}
+
+ul.topnav li a {
+	padding: 10px 5px;
+	display: block;
+	text-decoration: none;
+	color:#EAEAEA;
+}
+
+ul.topnav li a:hover {
+	background-color:#b30019;
+	color:white;
+}
+
+ul.topnav ul {
+	margin: 0;
+	padding: 0;
+	display: none;
+}
+
+ul.topnav ul li {
+	margin: 0;
+	padding: 0;
+	clear: both;
+}
+
+ul.topnav ul li a {
+	padding-left: 20px;
+	font-size: 14px;
+	font-weight: normal;
+	outline:0;
+}
+
+ul.topnav ul li a:hover {
+	background-color:#8c0013;
+}
+
+ul.topnav ul ul li a {
+	padding-left: 40px;
+	font-size: 12px;
+}
+
+ul.topnav ul ul li a:hover {
+	background-color:#66000e;
+}
+
+ul.topnav span{
+	float:right;
+}
