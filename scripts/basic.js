@@ -175,7 +175,7 @@ function loadWeapons() {
 function loadSquire() {
 	if (!document.getElementById('squireContent'))
 	{
-		document.getElementById("content").innerHTML = "<div id='squireContent'><h3>Squire Stats</h3><div id='squireData'></div><h3>Squire Active Abilities</h3><div id='squireBattleSkills'></div><h3>Squire Other Abilities</h3><div id='squireOtherSkills'></div></div>";
+		document.getElementById("content").innerHTML = "<div id='squireContent'><h3>Squire</h3><div id='squireData'></div><br><div id='squireBattleSkills'></div><br><div id='squireOtherSkills'></div></div>";
 	
 		loadGoogleDriveTable('squireData', '1UhDJ0G118_RKeToUh_JxCf0HzJg026a6CmCmQ8wMPJ0', 'A:M', '1067242928');
 		loadGoogleDriveTable('squireBattleSkills', '1UhDJ0G118_RKeToUh_JxCf0HzJg026a6CmCmQ8wMPJ0', 'A1:O7', '0');
