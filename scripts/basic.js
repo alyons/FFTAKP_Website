@@ -26,11 +26,14 @@ function loadGoogleDriveTable(elementID, documentKey, range, sheetID) {
 		var chart = new google.visualization.Table(document.getElementById(elementID));
 		chart.draw(data, options);
 		
-		// http://www.w3schools.com/jquery/jquery_traversing_descendants.asp
-		//document.getElementById(elementID).find("span").css({"color":"yellow", "border":"2px solid red"});
+		removeFloatLeftFromBarSpans();
 	});
 }
 function addIconsToTable(dataTable) {
+	addElementIconsToTable(dataTable);
+	//addStatusIconsToTable(dataTable);
+}
+function addElementIconsToTable (dataTable) {
 	var rows = dataTable.getNumberOfRows();
 	var cols = dataTable.getNumberOfColumns();
 	
@@ -88,6 +91,24 @@ function addIconsToTable(dataTable) {
 		}
 	}
 }
+function addStatusIconsToTable (dataTable) {
+	var rows = dataTable.getNumberOfRows();
+	var cols = dataTable.getNumberOfColumns();
+	
+	for(r = 0; r < rows; r++) {
+		for(c = 0; c < cols; c++) {
+			var cellValue = dataTable.getValue(r, c);
+			
+			if (typeof cellValue == 'string' || cellValue instanceof String) {
+				if (cellValue.indexOf("Silence") > -1) {
+					var newValue = cellValue.replace("Silence", "<img src=\"images/StatusEffects/silence.png\" alt=\"Silence\" title=\"Silence\">");
+					dataTable.setValue(r, c, newValue);
+				}
+				cellValue = dataTable.getValue(r, c);
+			}
+		}
+	}
+}
 function applyProgressBarToTable(dataTable) {
 	var cols = dataTable.getNumberOfColumns();
 	var formatter = new google.visualization.BarFormat({ base : 0, min: 0, max: 1, colorPositive: 'green' });
@@ -105,6 +126,14 @@ function loadProgressPage() {
 		document.getElementById('content').innerHTML = "<div id='progressContent'><h3>In Development</h3><div id=\"development\"></div><br><h3>Total Progress</h3><div id='progress'></div></div>";
 		loadGoogleDriveTable('progress', '13V6quW94TiJjoJ-h2sphQGv0F9iHZe8qOJoq4DgT-Xg', 'A:D', '0');
 		loadGoogleDriveTable('development', '13V6quW94TiJjoJ-h2sphQGv0F9iHZe8qOJoq4DgT-Xg', 'A:B', '1126400717');
+	}
+}
+function removeFloatLeftFromBarSpans() {
+	var elements = document.getElementsByTagName('*'),i;
+	for(i in elements) {
+		if ((" " + elements[i].className + " ").indexOf(" google-visualization-table-td-number ") > -1) {
+			elements[i].innerHTML = elements[i].innerHTML.replace("float: left;", "float: none;");
+		}
 	}
 }
 function loadAccessories() {
@@ -179,10 +208,52 @@ function loadSquire() {
 	{
 		document.getElementById("content").innerHTML = "<div id='squireContent'><h3>Squire</h3><div id='squireData'></div><br><div id='squireBattleSkills'></div><br><div id='squireOtherSkills'></div></div>";
 	
-		loadGoogleDriveTable('squireData', '1UhDJ0G118_RKeToUh_JxCf0HzJg026a6CmCmQ8wMPJ0', 'A:M', '1067242928');
+		loadGoogleDriveTable('squireData', '1UhDJ0G118_RKeToUh_JxCf0HzJg026a6CmCmQ8wMPJ0', 'A2:M3', '1067242928');
 		loadGoogleDriveTable('squireBattleSkills', '1UhDJ0G118_RKeToUh_JxCf0HzJg026a6CmCmQ8wMPJ0', 'A1:O7', '0');
-		loadGoogleDriveTable('squireOtherSkills', '1UhDJ0G118_RKeToUh_JxCf0HzJg026a6CmCmQ8wMPJ0', 'A:D', '1380116551');
+		loadGoogleDriveTable('squireOtherSkills', '1UhDJ0G118_RKeToUh_JxCf0HzJg026a6CmCmQ8wMPJ0', 'A9:D14', '0');
 	}
+}
+function loadBlueMage() {
+	if (!document.getElementById('blueMageContent'))
+	{
+		document.getElementById("content").innerHTML = "<div id='blueMageContent'><h3>Blue Mage</h3><div id='blueMageData'></div><br><div id='blueMageBattleSkills'></div><br><div id='blueMageOtherSkills'></div></div>";
+	
+		loadGoogleDriveTable('blueMageData', '1UhDJ0G118_RKeToUh_JxCf0HzJg026a6CmCmQ8wMPJ0', 'A6:M7', '1067242928');
+	}
+}
+function loadKnight() {
+}
+function loadThief() {
+}
+function loadWizard() {
+}
+function loadPriest() {
+}
+function loadMonk() {
+}
+function loadArcher() {
+}
+function loadOracle() {
+}
+function loadTimeMage() {
+}
+function loadGeomancer() {
+}
+function loadLancer() {
+}
+function loadLich() {
+}
+function loadGunMage() {
+}
+function loadSamurai() {
+}
+function loadNinja() {
+}
+function loadSummoner() {
+}
+function loadDuelist() {
+}
+function loadPerormer() {
 }
 function loadAllArmor() {
 

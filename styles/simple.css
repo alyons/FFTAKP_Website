@@ -37,6 +37,14 @@ p
 {
 	background-color: #0A0A0A;
 }
+#google-visualization-table-td-number
+{
+	text-align: center !important;
+}
+#google-visualization-table-td-number span
+{
+	float: none !important;
+}
 /* table, td, th, tr { background-color: #0A0A0A; } */
 .table-cell
 {
