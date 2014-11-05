@@ -8,7 +8,6 @@ var cssClassNames = {
 	'tableCell': 'table-cell center',
 	'rowNumberCell': ''};
 
-
 function loadTempPage() {
 	document.getElementById("content").innerHTML = "<h2>Please understand...</h2><p>This website is still under construction.</p>";
 }
@@ -26,6 +25,9 @@ function loadGoogleDriveTable(elementID, documentKey, range, sheetID) {
 		applyProgressBarToTable(data);
 		var chart = new google.visualization.Table(document.getElementById(elementID));
 		chart.draw(data, options);
+		
+		// http://www.w3schools.com/jquery/jquery_traversing_descendants.asp
+		//document.getElementById(elementID).find("span").css({"color":"yellow", "border":"2px solid red"});
 	});
 }
 function addIconsToTable(dataTable) {
