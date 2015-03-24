@@ -203,58 +203,7 @@ function loadWeapons() {
 		loadGoogleDriveTable('rapiers', '1NXkEJRhnUf8JVMNZFV6_5zVibZbOcCOSYtD1lMB1Exk', 'A:I', '1093677760');
 	}
 }
-function loadSquire() {
-	if (!document.getElementById('squireContent'))
-	{
-		document.getElementById("content").innerHTML = "<div id='squireContent'><h3>Squire</h3><div id='squireData'></div><br><div id='squireBattleSkills'></div><br><div id='squireOtherSkills'></div></div>";
-	
-		loadGoogleDriveTable('squireData', '1UhDJ0G118_RKeToUh_JxCf0HzJg026a6CmCmQ8wMPJ0', 'A2:M3', '1067242928');
-		loadGoogleDriveTable('squireBattleSkills', '1UhDJ0G118_RKeToUh_JxCf0HzJg026a6CmCmQ8wMPJ0', 'A1:O7', '0');
-		loadGoogleDriveTable('squireOtherSkills', '1UhDJ0G118_RKeToUh_JxCf0HzJg026a6CmCmQ8wMPJ0', 'A9:D14', '0');
-	}
-}
-function loadBlueMage() {
-	if (!document.getElementById('blueMageContent'))
-	{
-		document.getElementById("content").innerHTML = "<div id='blueMageContent'><h3>Blue Mage</h3><div id='blueMageData'></div><br><div id='blueMageBattleSkills'></div><br><div id='blueMageOtherSkills'></div></div>";
-	
-		loadGoogleDriveTable('blueMageData', '1UhDJ0G118_RKeToUh_JxCf0HzJg026a6CmCmQ8wMPJ0', 'A6:M7', '1067242928');
-	}
-}
-function loadKnight() {
-}
-function loadThief() {
-}
-function loadWizard() {
-}
-function loadPriest() {
-}
-function loadMonk() {
-}
-function loadArcher() {
-}
-function loadOracle() {
-}
-function loadTimeMage() {
-}
-function loadGeomancer() {
-}
-function loadLancer() {
-}
-function loadLich() {
-}
-function loadGunMage() {
-}
-function loadSamurai() {
-}
-function loadNinja() {
-}
-function loadSummoner() {
-}
-function loadDuelist() {
-}
-function loadPerormer() {
-}
+
 function loadAllArmor() {
 
 	if (!document.getElementById('armorContent'))
